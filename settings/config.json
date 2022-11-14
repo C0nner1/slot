@@ -1,0 +1,122 @@
+{
+    "resourceName" : "UX_Slots",
+    "backgroundColor" : "black",
+    "contourColor" : "purple",
+    "titleColor" : "white",
+    "UXNotify" : true,
+    "CustomNotify" : false,
+    "CustomNotifyEventName" : "CustomNotify",
+    "notifyBorderColor" : "purple",
+    "notifyBoxColor" : "black",
+    "notifyTitleColor" : "cyan",
+    "notifyTextColor" : "white",
+
+    "allowedLinesNumbers": [1,5,10],
+    "defaultLinesNumber": 10,
+    "allowedBetAmounts": [2,10,50,100,500,1000,5000,10000],
+    "defaultBetAmount" : 2,
+    "freeSpinsAmount" : 10,
+
+    "symbols": [
+
+        {
+            "name": "Bonus",
+            "imagePath": "images/Bonus.png",
+            "isBonus": true,
+            "amountPerReel": 5,
+            "amountPerReelFreeSpins": 0,
+            "multipliers": [0,0,0,0]
+        },
+        {
+            "name": "Ring",
+            "imagePath": "images/Ring.png",
+            "isBonus": false,
+            "amountPerReel": 7,
+            "amountPerReelFreeSpins": 7,
+            "multipliers": [10,100,1000,5000]
+        },
+        {
+            "name": "7",
+            "imagePath": "images/7.png",
+            "isBonus": false,
+            "amountPerReel": 9,
+            "amountPerReelFreeSpins": 9,
+            "multipliers": [5,40,400,2000]
+        },
+        {
+            "name": "Horseshoe",
+            "imagePath": "images/Horseshoe.png",
+            "isBonus": false,
+            "amountPerReel": 13,
+            "amountPerReelFreeSpins": 13,
+            "multipliers": [5,30,100,750]
+        },
+        {
+            "name": "Bell",
+            "imagePath": "images/Bell.png",
+            "isBonus": false,
+            "amountPerReel": 13,
+            "amountPerReelFreeSpins": 13,
+            "multipliers": [5,30,100,750]
+        },
+        {
+            "name": "A",
+            "imagePath": "images/A.png",
+            "isBonus": false,
+            "amountPerReel": 23,
+            "amountPerReelFreeSpins": 22,
+            "multipliers": [0,5,25,100]
+        },
+        {
+            "name": "J",
+            "imagePath": "images/J.png",
+            "isBonus": false,
+            "amountPerReel": 23,
+            "amountPerReelFreeSpins": 22,
+            "multipliers": [0,5,25,100]
+        },
+        {
+            "name": "10",
+            "imagePath": "images/10.png",
+            "isBonus": false,
+            "amountPerReel": 23,
+            "amountPerReelFreeSpins": 22,
+            "multipliers": [0,5,25,100]
+        },
+        {
+            "name": "Q",
+            "imagePath": "images/Q.png",
+            "isBonus": false,
+            "amountPerReel": 23,
+            "amountPerReelFreeSpins": 22,
+            "multipliers": [0,5,25,100]
+        }
+        
+    ],
+
+    "sounds": [
+
+        {
+            "name": "spin",
+            "path": "sounds/spin.mp3"
+        },
+        {
+            "name": "line",
+            "path": "sounds/line.wav"
+        },
+        {
+            "name": "win1",
+            "path": "sounds/win1.wav"
+        },
+        {
+            "name": "win2",
+            "path": "sounds/win2.mp3"
+        },
+        {
+            "name": "win3",
+            "path": "sounds/win3.wav"
+        }
+
+    ]
+}
+

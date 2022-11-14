@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Slot</title>
+        
+        <link href="index.css" , rel="stylesheet" , type="text/css">
+        <script type="text/javascript" src="howler.js" defer></script>
+        <script type="text/javascript" src="index.js" defer></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+
+    </head>
+
+    <body>
+
+
+        <div id="container" class="container">
+           
+            <button id="soundButton" onClick="switchSounds()" class="soundButton" > 
+                <img id="speakerImage" src="images/SpeakerON.png" style="position:absolute; width: 100%; height: 100%; left: 0%; top:0%">
+            </button>
+
+            <button id="turboButton" onClick="switchTurbo()" class="turboButton">
+                <img id="turboImage" src="images/TurboOFF.png" style="position:absolute; width: 100%; height: 100%; left: 0%; top:0%" >
+            </button>
+
+            <div id="panelTop" class="panelTop">
+                <div id = "freeSpinsInfo"> 
+                    <h1 class="freeSpinsText" style="left: 35%; font-size:3vh;">3x</h1>
+                    <img id ="bonusSymbol" class = "bonusSymbolInfo">
+                    <h1 class="freeSpinsText" style="left: 60%; font-size:3vh;">for Free Spins</h1>
+                </div>
+                <div >
+                    <h1 id="freeSpinsLeft" class="bonusSymbolInfo" style="left: 41%;font-size:3vh;">10 Free Spins Left</h1>
+                    <h1 id="multiplier" class="bonusSymbolInfo" style="top: 70%; left: 43%; margin-inline-end: 500px;font-size:3vh;">10</h1>
+                    <h1 id="multiplierText" class="bonusSymbolInfo" style="top: 70%; left: 47%;font-size:3vh;">Multiplier</h1>
+                </div>
+            </div>
+
+            <div class="columnsPanel">
+                <img src="images/Columns.png" class="columnsImage">
+                <div class="columnBorder" style="z-index: 30; left: 0%" ></div>
+                <div class="columnBorder" style="z-index: 30; left: 20%"></div>
+                <div class="columnBorder" style="z-index: 30; left: 40%"></div>
+                <div class="columnBorder" style="z-index: 30; left: 60%"></div>
+                <div class="columnBorder" style="z-index: 30; left: 80%"></div>
+
+            </div>
+            
+            <div class="column" style ="z-index: 20; left: 13.25%">
+                <img id="symbol1-1" class="symbol" style="top:-7.4%;">
+                <img id="symbol1-2" class="symbol" style="top:15.5%">
+                <img id="symbol1-3" class="symbol" style="top:38.4%">
+                <img id="symbol1-4" class="symbol" style="top:61.3%">
+            </div>
+            <div class="column" style ="z-index: 20; left: 28.3%">
+                <img id="symbol2-1" class="symbol" style="top:-7.4%;">
+                <img id="symbol2-2" class="symbol" style="top:15.5%">
+                <img id="symbol2-3" class="symbol" style="top:38.4%">
+                <img id="symbol2-4" class="symbol" style="top:61.3%">
+            </div>
+            <div class="column" style ="z-index: 20; left: 43.3%">
+                <img id="symbol3-1" class="symbol" style="top:-7.4%;">
+                <img id="symbol3-2" class="symbol" style="top:15.5%">
+                <img id="symbol3-3" class="symbol" style="top:38.4%">
+                <img id="symbol3-4" class="symbol" style="top:61.3%">
+            </div>
+            <div class="column" style ="z-index: 20; left: 58.4%">
+                <img id="symbol4-1" class="symbol" style="top:-7.4%;">
+                <img id="symbol4-2" class="symbol" style="top:15.5%">
+                <img id="symbol4-3" class="symbol" style="top:38.4%">
+                <img id="symbol4-4" class="symbol" style="top:61.3%">
+            </div>
+            <div class="column" style ="z-index: 20; left: 73.48%">
+                <img id="symbol5-1" class="symbol" style="top:-7.4%;">
+                <img id="symbol5-2" class="symbol" style="top:15.5%">
+                <img id="symbol5-3" class="symbol" style="top:38.4%">
+                <img id="symbol5-4" class="symbol" style="top:61.3%">
+            </div>
+            
+
+            <div id="panelBottom" class="panelBottom">
+                <div class="betPanel">
+                    <button onClick="betUp()" class="PlusMinusButton"><img class="PlusMinusImage" src="images/Plus.png"></button>
+                    
+                    <h4 id="bet" style="font-size:1.4vh;line-height: 200%;">10.000</h4>
+                    <h4 style="font-size:1.4vh;">TOTAL BET</h4>
+                    
+                    
+                    <button onClick="betDown()" class="PlusMinusButton" style="top: 80%"><img class="PlusMinusImage" src="images/Minus.png"></button>
+                </div>
+                <div class="linePanel">
+                    <button onClick="linesUp()" class="PlusMinusButton"><img class="PlusMinusImage" src="images/Plus.png" style="left: -50%; width: 200%;"></button>
+                    <div></div>
+                    <h4 id="lines" style="font-size:1.4vh;line-height: 200%;">10</h4>
+                    <h4 style="font-size:1.4vh;">LINES</h4>
+                    <button onClick="linesDown()" class="PlusMinusButton" style="top: 80%"><img class="PlusMinusImage" src="images/Minus.png" style="left: -50%; width: 200%;"></button>
+                </div>
+                <div class="balancePanel">
+                    <div style="text-align: center;">
+                        <h1 id="win" class="win" style="font-size:3vh;">Choose your BET</h1>
+                    </div>
+                    <h2 class="balanceText" style="font-size:2.3vh;">BALANCE</h2>
+                    <h2 id="balance" class="balance" style="font-size:2.3vh;">1.000.000</h2>
+                </div>
+                <button class="maxBet" onclick="maxBet()"> <h1 style="font-size:3vh;">MAX BET</h1></button>
+                <button class="autoSpin" onclick="autoSpin()"><h1 id="autoSpinText" style="font-size:3vh;">AUTO</h1></button>
+                <button class="spin" onclick="startSpin()"><img src="images/Spin.png" style="height: 95%; -webkit-user-drag: none;"></button>
+            </div>
+
+            <div class="blueLine"></div>
+            <div class="blackLine"></div>
+            <div class="blackLine" style="top: 84.5%"></div>
+            <div class="blueLine" style="top: 100%"></div>
+
+
+            <img class="lineColumn" src="images/LineColumnLeft.png">
+            <img class="lineColumn" src="images/LineColumnRight.png" style="left: 88.5%;">
+
+            <div style="z-index: 600;">
+                <img id="line1" src="images/Line1.png" class="line">
+                <img id="line2" src="images/Line2.png" class="line" style="top: 25.6%">
+                <img id="line3" src="images/Line3.png" class="line" style="top: 75%">
+                <img id="line4" src="images/Line4.png" class="line" style="top: 18.5%; height: 60%;">
+                <img id="line5" src="images/Line5.png" class="line" style="top: 21.3%; height: 60%;">
+                <img id="line6" src="images/Line6.png" class="line" style="top: 27%; height: 28.5%;">
+                <img id="line7" src="images/Line7.png" class="line" style="top: 52.8%; height: 24.2%;">
+                <img id="line8" src="images/Line8.png" class="line" style="top: 27.9%; height: 53.7%;">
+                <img id="line9" src="images/Line9.png" class="line" style="top: 27.8%; height: 53.2%;">
+                <img id="line10" src="images/Line10.png" class="line" style="top: 27%; height: 50.8%;">
+            </div>
+            
+           
+        </div>
+
+    </body>
+</html>
